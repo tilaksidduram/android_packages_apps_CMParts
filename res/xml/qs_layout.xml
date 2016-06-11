@@ -58,6 +58,12 @@
         android:summary="@string/qqs_scroll_summary"
         android:defaultValue="false"/>
 
+    <cyanogenmod.preference.SecureSettingSwitchPreference
+        android:key="lockscreen_qs_disabled"
+        android:title="@string/lockscreen_qs_disabled_title"
+        android:summary="@string/lockscreen_qs_disabled_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="qs_rows_portrait"
         android:title="@string/qs_rows_portrait_title"
