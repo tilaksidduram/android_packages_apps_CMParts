@@ -93,6 +93,13 @@
         android:summary="@string/status_bar_double_tap_to_sleep_summary"
         android:defaultValue="true" />
 
+    <cyanogenmod.preference.CMSystemSettingSwitchPreference
+        android:key="show_su_indicator"
+        android:title="@string/su_indicator"
+        android:summaryOn="@string/su_indicator_summary_on"
+        android:summaryOff="@string/su_indicator_summary_off"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
