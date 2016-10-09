@@ -106,6 +106,12 @@
 	android:summary="@string/network_traffic_summary"
 	android:title="@string/network_traffic_title" />
 
+     <PreferenceScreen
+        android:key="batterybar"
+        android:fragment="org.cyanogenmod.cmparts.custom.BatteryBar"
+	android:summary="@string/battery_bar_summary"
+	android:title="@string/battery_bar_title" />
+
     <PreferenceCategory
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
