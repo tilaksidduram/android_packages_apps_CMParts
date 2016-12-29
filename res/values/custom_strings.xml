@@ -145,4 +145,8 @@
     <!-- BT easy toggle -->
     <string name="qs_bt_easy_toggle_title">Bluetooth tile easy toggle</string>
     <string name="qs_bt_easy_toggle_summary">Enable one tap action to enable or disable Bluetooth</string>
+
+    <!-- WiFi easy toggle -->
+    <string name="qs_wifi_easy_toggle_title">WiFi tile easy toggle</string>
+    <string name="qs_wifi_easy_toggle_summary">Enable one tap action to enable or disable WiFi</string>
 </resources>
