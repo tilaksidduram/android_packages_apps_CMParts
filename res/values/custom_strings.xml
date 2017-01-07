@@ -149,4 +149,8 @@
     <!-- WiFi easy toggle -->
     <string name="qs_wifi_easy_toggle_title">WiFi tile easy toggle</string>
     <string name="qs_wifi_easy_toggle_summary">Enable one tap action to enable or disable WiFi</string>
+
+    <!-- qqs scroller -->
+    <string name="qqs_scroll_title">Scroll small QS tiles</string>
+    <string name="qqs_scroll_summary">Allow scrolling through the small QS tiles</string>
 </resources>
