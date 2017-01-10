@@ -93,7 +93,7 @@
         android:summary="@string/status_bar_double_tap_to_sleep_summary"
         android:defaultValue="true" />
 
-    <cyanogenmod.preference.CMSystemSettingSwitchPreference
+    <cyanogenmod.preference.SystemSettingSwitchPreference
         android:key="show_su_indicator"
         android:title="@string/su_indicator"
         android:summaryOn="@string/su_indicator_summary_on"
@@ -104,21 +104,21 @@
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
 
-    <cyanogenmod.preference.CMSystemSettingSwitchPreference
+    <cyanogenmod.preference.SystemSettingSwitchPreference
         android:key="qs_show_brightness"
         android:title="@string/qs_brightness_slider_title"
         android:summaryOn="@string/qs_brightness_slider_enabled"
         android:summaryOff="@string/qs_brightness_slider_disabled"
         android:defaultValue="true" />
 
-    <cyanogenmod.preference.CMSystemSettingSwitchPreference
+    <cyanogenmod.preference.SystemSettingSwitchPreference
         android:key="brightness_icon"
         android:title="@string/brightness_icon_title"
         android:summary="@string/brightness_icon_summary"
         android:dependency="qs_show_brightness"
         android:defaultValue="true"/>
 
-    <cyanogenmod.preference.CMSystemSettingSwitchPreference
+    <cyanogenmod.preference.SystemSettingSwitchPreference
         android:key="quick_settings_vibrate"
         android:title="@string/quick_settings_vibrate_title"
         android:summary="@string/quick_settings_vibrate_summary"
