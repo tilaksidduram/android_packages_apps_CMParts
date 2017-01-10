@@ -93,4 +93,24 @@
         android:summary="@string/status_bar_double_tap_to_sleep_summary"
         android:defaultValue="true" />
 
+    <PreferenceCategory
+        android:key="quicksettings_tiles_category"
+        android:title="@string/quicksettings_tiles_category">
+
+    <cyanogenmod.preference.CMSystemSettingSwitchPreference
+        android:key="qs_show_brightness"
+        android:title="@string/qs_brightness_slider_title"
+        android:summaryOn="@string/qs_brightness_slider_enabled"
+        android:summaryOff="@string/qs_brightness_slider_disabled"
+        android:defaultValue="true" />
+
+    <cyanogenmod.preference.CMSystemSettingSwitchPreference
+        android:key="brightness_icon"
+        android:title="@string/brightness_icon_title"
+        android:summary="@string/brightness_icon_summary"
+        android:dependency="qs_show_brightness"
+        android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
