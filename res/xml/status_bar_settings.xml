@@ -142,6 +142,11 @@
         android:summary="@string/qs_advanced_data_summary"
         android:defaultValue="false" />
 
+     <PreferenceScreen
+        android:key="quicksettings"
+        android:fragment="org.cyanogenmod.cmparts.custom.QuickSettingsFragment"
+	android:title="@string/quick_settings_title" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
