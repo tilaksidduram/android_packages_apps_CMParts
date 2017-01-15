@@ -37,7 +37,7 @@
     <string name="su_indicator_summary_off">Toggle to show superuser indicator when a session is active</string>
 
     <!-- Advanced data tile -->
-    <string name="qs_advanced_data_title">Advanced data tile</string>
+    <string name="qs_advanced_data_title">Data tile easy toggle</string>
     <string name="qs_advanced_data_summary">Enable one tap action to enable or disable data</string>
 
     <!-- Network traffic -->
@@ -140,7 +140,7 @@
 
     <!-- Battery Saver easy toggle -->
     <string name="qs_battery_easy_toggle_title">Battery tile easy toggle</string>
-    <string name="qs_battery_easy_toggle_summary">Makes it so one click will turn Battery Saver on or off instead of taking you to settings</string>
+    <string name="qs_battery_easy_toggle_summary">Enable one tap action to enable or disable Battery Saver</string>
 
     <!-- BT easy toggle -->
     <string name="qs_bt_easy_toggle_title">Bluetooth tile easy toggle</string>
