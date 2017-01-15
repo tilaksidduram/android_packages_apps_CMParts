@@ -11,7 +11,8 @@
      limitations under the License.
 -->
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/org.cyanogenmod.cmparts">
 
     <PreferenceCategory
         android:key="quicksettings_tiles_category"

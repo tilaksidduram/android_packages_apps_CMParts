@@ -10,12 +10,12 @@ import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceFragment;
+import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -28,18 +28,18 @@ import java.util.HashSet;
 import java.util.Set;
 
 import cyanogenmod.providers.CMSettings;
-import cyanogenmod.preference.SystemSettingSwitchPreference;
-import cyanogenmod.preference.SecureSettingSwitchPreference;
 
 import org.cyanogenmod.cmparts.utils.Utils;
 import org.cyanogenmod.cmparts.R;
 import org.cyanogenmod.cmparts.widget.SeekBarPreferenceCham;
-import org.cyanogenmod.cmparts.SettingsPreferenceFragment;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class QuickSettingsFragment extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+public class SettingsPreferenceFragment extends PreferenceFragment
+        implements OnPreferenceChangeListener {
+
+    public SettingsPreferenceFragment() {
+    }
 
     private static final String TAG = "QuickSettings";
 
@@ -129,8 +129,8 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
     }
 
     @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        return super.onPreferenceTreeClick(preference);
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     @Override
