@@ -12,9 +12,6 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/org.cyanogenmod.cmparts">
-
-    <PreferenceCategory
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
 
@@ -93,7 +90,5 @@
         android:entries="@array/qs_tile_animation_interpolator_entries"
         android:entryValues="@array/qs_tile_animation_interpolator_values"
         android:persistent="false" />
-
-    </PreferenceCategory>
 
 </PreferenceScreen>

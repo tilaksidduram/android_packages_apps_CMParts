@@ -16,29 +16,35 @@
 
 package org.cyanogenmod.cmparts.custom;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.database.ContentObserver;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceCategory;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceScreen;
-import android.preference.SwitchPreference;
+import android.app.Fragment;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.ListPreference;
+import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.telephony.TelephonyManager;
 
 import org.cyanogenmod.cmparts.R;
-import org.cyanogenmod.cmparts.custom.utils.Utils;
+import org.cyanogenmod.cmparts.utils.Utils;
+import org.cyanogenmod.cmparts.SettingsPreferenceFragment;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class BatteryBarFragment extends PreferenceFragment
-        implements OnPreferenceChangeListener {
+public class BatteryBar extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "Batterybar";
 
@@ -204,7 +210,7 @@ public class BatteryBarFragment extends PreferenceFragment
         return false;
     }
 
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+    public boolean onPreferenceTreeClick(Preference preference) {
         ContentResolver resolver = getActivity().getContentResolver();
         boolean value;
         if (preference == mBatteryBarChargingAnimation) {
