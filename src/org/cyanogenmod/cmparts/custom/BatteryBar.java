@@ -22,25 +22,25 @@ import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceCategory;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceScreen;
-import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
 import android.telephony.TelephonyManager;
 
 import org.cyanogenmod.cmparts.R;
-import org.cyanogenmod.cmparts.custom.utils.Utils;
+import org.cyanogenmod.cmparts.utils.Utils;
+import org.cyanogenmod.cmparts.SettingsPreferenceFragment;
+
+import cyanogenmod.preference.SystemSettingSwitchPreference;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class BatteryBarFragment extends PreferenceFragment
-        implements OnPreferenceChangeListener {
+public class BatteryBar extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
-    private static final String TAG = "Batterybar";
+    private static final String TAG = "BatteryBar";
 
     private static final String PREF_BATT_BAR = "battery_bar_list";
     private static final String PREF_BATT_BAR_NO_NAVBAR = "battery_bar_no_navbar_list";
@@ -61,9 +61,9 @@ public class BatteryBarFragment extends PreferenceFragment
     private ListPreference mBatteryBarStyle;
     private ListPreference mBatteryBarThickness;
     private SwitchPreference mBatteryBarChargingAnimation;
-    private SwitchPreference mBatteryBarUseChargingColor;
-    private SwitchPreference mBatteryBarBlendColors;
-    private SwitchPreference mBatteryBarBlendColorsReverse;
+    private SystemSettingSwitchPreference mBatteryBarUseChargingColor;
+    private SystemSettingSwitchPreference mBatteryBarBlendColors;
+    private SystemSettingSwitchPreference mBatteryBarBlendColorsReverse;
     private ColorPickerPreference mBatteryBarColor;
     private ColorPickerPreference mBatteryBarChargingColor;
     private ColorPickerPreference mBatteryBarBatteryLowColor;
@@ -125,9 +125,9 @@ public class BatteryBarFragment extends PreferenceFragment
                 Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, 1)) + "");
         mBatteryBarThickness.setSummary(mBatteryBarThickness.getEntry());
 
-        mBatteryBarUseChargingColor = (SwitchPreference) findPreference(PREF_BATT_USE_CHARGING_COLOR);
-        mBatteryBarBlendColors = (SwitchPreference) findPreference(PREF_BATT_BLEND_COLORS);
-        mBatteryBarBlendColorsReverse = (SwitchPreference) findPreference(PREF_BATT_BLEND_COLORS_REVERSE);
+        mBatteryBarUseChargingColor = (SystemSettingSwitchPreference) findPreference(PREF_BATT_USE_CHARGING_COLOR);
+        mBatteryBarBlendColors = (SystemSettingSwitchPreference) findPreference(PREF_BATT_BLEND_COLORS);
+        mBatteryBarBlendColorsReverse = (SystemSettingSwitchPreference) findPreference(PREF_BATT_BLEND_COLORS_REVERSE);
 
         boolean hasNavBarByDefault = getResources().getBoolean(
                 com.android.internal.R.bool.config_showNavigationBar);
@@ -204,7 +204,7 @@ public class BatteryBarFragment extends PreferenceFragment
         return false;
     }
 
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+    public boolean onPreferenceTreeClick(Preference preference) {
         ContentResolver resolver = getActivity().getContentResolver();
         boolean value;
         if (preference == mBatteryBarChargingAnimation) {
