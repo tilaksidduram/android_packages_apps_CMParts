@@ -21,8 +21,9 @@
     <cyanogenmod.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_menu_item_titles"
-        android:summary="@string/qs_menu_item_titles_summary"
-        android:defaultValue="false" />
+        android:summaryOn="@string/qs_menu_item_titles_summaryOn"
+        android:summaryOff="@string/qs_menu_item_titles_summaryOff"
+        android:defaultValue="true" />
 
     <cyanogenmod.preference.SystemSettingSwitchPreference
         android:key="music_tile_title"

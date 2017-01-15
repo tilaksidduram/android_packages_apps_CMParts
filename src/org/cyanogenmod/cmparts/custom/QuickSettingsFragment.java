@@ -126,11 +126,6 @@ public class SettingsPreferenceFragment extends PreferenceFragment
         mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntry());
         mSysuiQqsCount.setOnPreferenceChangeListener(this);
 
-        mQsTileTitleVisibility = (SwitchPreference) findPreference(PREF_QS_TILE_TITLE_VISIBILITY);
-        mQsTileTitleVisibility.setOnPreferenceChangeListener(this);
-        mQsTileTitleVisibility.setChecked((Settings.System.getIntForUser(resolver,
-                Settings.System.QS_TILE_TITLE_VISIBILITY, 0,
-                UserHandle.USER_CURRENT) == 1));
     }
 
     @Override
@@ -189,11 +184,6 @@ public class SettingsPreferenceFragment extends PreferenceFragment
             Settings.Secure.putInt(resolver, Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
             int SysuiQqsCountIndex = mSysuiQqsCount.findIndexOfValue(SysuiQqsCount);
             mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
-            return true;
-        } else if  (preference == mQsTileTitleVisibility) {
-            boolean checked = ((SwitchPreference) preference).isChecked();
-            Settings.System.putIntForUser(resolver,
-                    Settings.System.QS_TILE_TITLE_VISIBILITY, checked ? 1:0, UserHandle.USER_CURRENT);
             return true;
         }
         return false;

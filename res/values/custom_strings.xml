@@ -130,8 +130,9 @@
     <string name="qs_set_animation_interpolator">%1$s</string>
 
     <!-- QS tile labels visibility -->
-    <string name="qs_menu_item_titles">Hide QS tile labels</string>
-    <string name="qs_menu_item_titles_summary">Quick tile labels in notification drawer will be hidden if true</string>
+    <string name="qs_menu_item_titles">QS tile labels</string>
+    <string name="qs_menu_item_titles_summaryOn">Labels are shown</string>
+    <string name="qs_menu_item_titles_summaryOff">Labels are hidden</string>
 
     <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Music tile track title</string>
