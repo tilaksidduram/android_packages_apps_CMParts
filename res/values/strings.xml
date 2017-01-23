@@ -146,6 +146,8 @@
     <string name="live_display_color_profile_basic_summary">Use the display uncalibrated</string>
     <string name="live_display_color_profile_adaptive_title">Adaptive</string>
     <string name="live_display_color_profile_adaptive_summary">Colors adapt to ambient conditions</string>
+    <string name="live_display_color_profile_reading_title">Reading</string>
+    <string name="live_display_color_profile_reading_summary">Warmer colors for less eye strain</string>
     <string name="color_calibration_title">Color calibration</string>
     <string name="color_calibration_summary">Calibrate on-screen colors</string>
     <string name="color_red_title">Red</string>
@@ -563,4 +565,12 @@
     <string name="expanded_desktop_style_hide_navigation">Hide navigation bar</string>
     <string name="expanded_desktop_style_hide_both">Hide both</string>
     <string name="expanded_desktop_nothing_to_show_text">Turn the switch off to customize your expanded desktop on a per-app basis</string>
+
+    <!-- Sounds: Charging sounds -->
+    <string name="charging_sounds_settings_title">Charging sounds</string>
+    <string name="charging_sounds_enabled_title">Enable</string>
+    <string name="charging_sounds_enabled_summary">Play a sound when connecting or disconnecting a power source</string>
+    <string name="power_notifications_vibrate_title">Vibrate</string>
+    <string name="charging_sounds_ringtone_title">Notification sound</string>
+    <string name="charging_sounds_ringtone_silent">Silent</string>
 </resources>
