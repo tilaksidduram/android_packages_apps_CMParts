@@ -374,8 +374,6 @@
   <string name="status_bar_notif_count_summary">Εμφάνιση του αριθμού των ειδοποιήσεων που εκκρεμούν στη γραμμή κατάστασης</string>
   <string name="status_bar_quick_qs_pulldown_title">Γρήγορο τράβηγμα</string>
   <string name="status_bar_quick_qs_pulldown_summary">Τραβώντας προς τα κάτω την %1$s άκρη της γραμμής κατάστασης εμφανίζονται οι Γρήγορες ρυθμίσεις</string>
-  <string name="status_bar_quick_qs_pulldown_summary_left">αριστερή</string>
-  <string name="status_bar_quick_qs_pulldown_summary_right">δεξιά</string>
   <string name="status_bar_quick_qs_pulldown_off">Απενεργοποιημένη</string>
   <string name="status_bar_quick_qs_pulldown_left">Αριστερά</string>
   <string name="status_bar_quick_qs_pulldown_right">Δεξιά</string>
@@ -404,9 +402,6 @@
   <!-- Status bar - icon blacklist -->
   <string name="status_bar_icons_title">Εικονίδια γραμμής κατάστασης</string>
   <string name="status_bar_icons_summary">Ελέγξτε ποια εικονίδια θα εμφανίζονται στη γραμμή κατάστασης</string>
-  <!-- Status bar - double tap to sleep -->
-  <string name="status_bar_double_tap_to_sleep_title">Διπλό χτύπημα για αναστολή</string>
-  <string name="status_bar_double_tap_to_sleep_summary">Διπλό χτύπημα της γραμμής κατάστασης για απενεργοποίηση οθόνης</string>
   <!-- Protected apps -->
   <string name="protected_apps_manager_title">Προστατευμένες εφαρμογές</string>
   <string name="protected_apps_manager_summary">Διαχειριστείτε ποιές εφαρμογές θα είναι κρυμμένες πίσω από ένα ασφαλές κλείδωμα</string>
@@ -499,4 +494,5 @@
   <string name="expanded_desktop_style_hide_both">Απόκρυψη όλων</string>
   <string name="expanded_desktop_nothing_to_show_text">Απενεργοποιήστε το διακόπτη για να προσαρμόσετε την επέκταση επιφάνειας ανά εφαρμογή</string>
   <!-- Sounds: Charging sounds -->
+  <!-- Gestures: Touchscreen gestures -->
 </resources>

@@ -105,7 +105,7 @@
   <string name="led_notification_text">LED светлини, разрешени в настройките</string>
   <string name="notification_light_no_apps_summary">За да добавите отделен контрол за приложение, активирайте \'%1$s\' и натиснете \'\u002b\' в лентата на менюто</string>
   <!-- LiveDisplay -->
-  <string name="live_display_summary">Оптимизира настройките на екрана, въз основа на времето от деня и условията на околната среда за да се подобри четливостта и да намали умората на очите</string>
+  <string name="live_display_summary">Оптимизира настройките на дисплея, въз основа на времето от деня и условията на околната среда за да се подобри четливостта и да намали умората на очите</string>
   <string name="live_display_mode">Режим на екрана</string>
   <string name="live_display_color_temperature_title">Температура на цвета</string>
   <string name="live_display_color_temperature_summary">Ден: <xliff:g id="day_temperature">%1$d </xliff:g> K нощ: <xliff:g id="night_temperature">%2$d </xliff:g> K</string>
@@ -176,14 +176,14 @@
   <string name="camera_sleep_on_release_summary">Леко натискане ще запази екрана само, докато бутонът е натиснат</string>
   <string name="camera_launch_title">Стартиране на камерата</string>
   <string name="camera_launch_summary">Дълго натискане и освобождаване за стартиране на камерата</string>
-  <string name="volbtn_music_controls_title">Управление на възпроизвеждането</string>
-  <string name="volbtn_music_controls_summary">Търси песни чрез дълъго натискане на бутоните на звука докато дисплеят е изключен</string>
+  <string name="volbtn_music_controls_title">Управление на музика</string>
+  <string name="volbtn_music_controls_summary">Смяна на песни чрез дълъго натискане на бутоните на звука докато дисплеят е изключен</string>
   <string name="volbtn_cursor_control_title">Контрол на курсора</string>
-  <string name="volbtn_cursor_control_off">Изключена</string>
+  <string name="volbtn_cursor_control_off">Изключен</string>
   <string name="volbtn_cursor_control_on">Звука нагоре/надолу премества курсора наляво/надясно</string>
   <string name="volbtn_cursor_control_on_reverse">Звука нагоре/надолу премества курсора надясно/наляво</string>
   <string name="power_end_call_title">Край на повикването</string>
-  <string name="power_end_call_summary">Край текущото повикване чрез натискане на бутона за захранване</string>
+  <string name="power_end_call_summary">Прекратяване на текущото повикване чрез натискане на бутона за захранване</string>
   <string name="swap_volume_buttons_title">Преориентиране</string>
   <string name="swap_volume_buttons_summary">Разменя бутоните за сила на звука, когато екрана се завъртян</string>
   <string name="button_wake_title">Събуди устройството</string>
@@ -199,9 +199,9 @@
   <string name="keyboard_backlight_seekbar_title">Яркост на клавиатурата</string>
   <string name="backlight_timeout_title">Време на изчакване на осветлението</string>
   <string name="backlight_timeout_unlimited">Не изключвай</string>
-  <string name="backlight_summary_disabled">Изключена</string>
+  <string name="backlight_summary_disabled">Деактивирани</string>
   <string name="backlight_summary_enabled_with_timeout">Разрешена за <xliff:g id="timeout">%s </xliff:g></string>
-  <string name="backlight_summary_enabled">Разрешено</string>
+  <string name="backlight_summary_enabled">Активирани</string>
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Разреши екранната лента за навигация</string>
   <string name="disable_navkeys_summary">Разреши екранна навигационна лента и забрани хардуерните бутони</string>
@@ -250,7 +250,7 @@
   <string name="profile_setup_actions_title_config">Преконфигуриране на действия</string>
   <string name="wireless_networks_settings_title">Кабелни&amp; безжични мрежи</string>
   <!-- Profile triggers -->
-  <string name="no_bluetooth_triggers">Няма сдвоени Bluetooth устройства. \nДокоснете за да сдвойте Bluetooth устройството преди конфигурирането на превключвателите.</string>
+  <string name="no_bluetooth_triggers">Няма сдвоени блутуут устройства. \nДокоснете за да сдвойте блутуут устройството преди конфигурирането на превключвателите.</string>
   <string name="no_wifi_triggers">Няма настроени точки за достъп чрез Wi\u2011Fi.\nДокоснете за да се свържете с Wi\u2011Fi преди конфигурирането на превключвателите.</string>
   <string name="no_triggers_configured">Няма конфигуриран превключвател. Натиснете, за да добавите още.</string>
   <string name="no_triggers_configured_nfc">Натиснете, за да настройте нов NFC превключвател.</string>
@@ -376,8 +376,6 @@
   <string name="status_bar_notif_count_summary">Показва броя на новите известия в лентата на състоянието</string>
   <string name="status_bar_quick_qs_pulldown_title">Бързи настройки</string>
   <string name="status_bar_quick_qs_pulldown_summary">Дръпнете %1$s лентата на състоянието за бързи настройки</string>
-  <string name="status_bar_quick_qs_pulldown_summary_left">Вляво</string>
-  <string name="status_bar_quick_qs_pulldown_summary_right">Вдясно</string>
   <string name="status_bar_quick_qs_pulldown_off">Изключен</string>
   <string name="status_bar_quick_qs_pulldown_left">Вляво</string>
   <string name="status_bar_quick_qs_pulldown_right">Вдясно</string>
@@ -406,9 +404,6 @@
   <!-- Status bar - icon blacklist -->
   <string name="status_bar_icons_title">Икони на лентата</string>
   <string name="status_bar_icons_summary">Изберете, кои икони да се показват в лентата на състоянието</string>
-  <!-- Status bar - double tap to sleep -->
-  <string name="status_bar_double_tap_to_sleep_title">Двукратно почукване за заспиване</string>
-  <string name="status_bar_double_tap_to_sleep_summary">Двукратно почукване върху лентата на състоянието изключва на дисплея</string>
   <!-- Protected apps -->
   <string name="protected_apps_manager_title">Защитени приложения</string>
   <string name="protected_apps_manager_summary">Изберете кои приложения да се зареждат след въвеждане на парола</string>
@@ -482,8 +477,8 @@
   <string name="power_save_title">Изключително пестене на батерия</string>
   <string name="power_save_summary">Ограничаване производителноста на устройството и работата във фонов режим за икономия на енергия</string>
   <string name="auto_power_save_title">Автоматичнен режим на енергоспестяване</string>
-  <string name="auto_power_save_summary_on">Автоматично се активира режима за енергоспестяване при %s на батерията</string>
-  <string name="auto_power_save_summary_off">Автоматичния режим енергоспестяване не е деактивиран</string>
+  <string name="auto_power_save_summary_on">Режима за енергоспестяване автоматично се активира при %s на батерията</string>
+  <string name="auto_power_save_summary_off">Автоматичния режим на енергоспестяване е деактивиран</string>
   <string name="app_perf_profiles_title">Автоматична оптимизация</string>
   <string name="app_perf_profiles_summary">Автоматичен избор на подходящ профил на производителност за различните приложения</string>
   <string name="auto_power_save_never">Никога</string>
@@ -504,4 +499,36 @@
   <string name="power_notifications_vibrate_title">Вибрация</string>
   <string name="charging_sounds_ringtone_title">Тон за уведомяване</string>
   <string name="charging_sounds_ringtone_silent">Без звук</string>
+  <!-- Gestures: Touchscreen gestures -->
+  <string name="touchscreen_gesture_settings_title">Тъчскрийн жестове</string>
+  <string name="touchscreen_gesture_settings_summary">Изпълнява различни бързи действия чрез жестове върху сензорния екран</string>
+  <string name="touchscreen_gestures_haptic_feedback_title">Вибрация при докосване</string>
+  <string name="touchscreen_gestures_haptic_feedback_summary">Вибрира при засичане на сензорен жест</string>
+  <string name="touchscreen_gesture_two_finger_down_swipe_title">Плъзнете надолу с два пръста</string>
+  <string name="touchscreen_gesture_one_finger_up_swipe_title">Плъзнете нагоре с един пръст</string>
+  <string name="touchscreen_gesture_one_finger_down_swipe_title">Плъзнете надолу с един пръст</string>
+  <string name="touchscreen_gesture_one_finger_left_swipe_title">Плъзнете наляво с един пръст</string>
+  <string name="touchscreen_gesture_one_finger_right_swipe_title">Плъзнете надясно с един пръст</string>
+  <string name="touchscreen_gesture_up_arrow_title">Изпишете \"Λ\"</string>
+  <string name="touchscreen_gesture_down_arrow_title">Изпишете \"V\"</string>
+  <string name="touchscreen_gesture_left_arrow_title">Изпишете \"&lt;\"</string>
+  <string name="touchscreen_gesture_right_arrow_title">Изпишете \"&gt;\"</string>
+  <string name="touchscreen_gesture_letter_c_title">Изпишете буквата \"C\"</string>
+  <string name="touchscreen_gesture_letter_e_title">Изпишете буквата \"е\"</string>
+  <string name="touchscreen_gesture_letter_o_title">Изпишете буквата \"О\"</string>
+  <string name="touchscreen_gesture_letter_m_title">Изпишете буквата \"M\"</string>
+  <string name="touchscreen_gesture_letter_s_title">Изпишете буквата \"S\"</string>
+  <string name="touchscreen_gesture_letter_w_title">Изпишете буквата \"W\"</string>
+  <string name="touchscreen_gesture_letter_z_title">Изпишете буквата \"Z\"</string>
+  <string name="touchscreen_gesture_action_dialog_title">Жестове</string>
+  <string name="touchscreen_gesture_action_do_nothing">Не прави нищо</string>
+  <string name="touchscreen_gesture_action_flashlight">Включване / Изключване на фенерчето</string>
+  <string name="touchscreen_gesture_action_camera">Отваряне на камерата</string>
+  <string name="touchscreen_gesture_action_browser">Отваряне на браузъра</string>
+  <string name="touchscreen_gesture_action_dialer">Отворяне на телефон</string>
+  <string name="touchscreen_gesture_action_email">Преглет на имейли</string>
+  <string name="touchscreen_gesture_action_messages">Преглед на съобщения</string>
+  <string name="touchscreen_gesture_action_play_pause_music">Възпроизвеждане и пауза на музика</string>
+  <string name="touchscreen_gesture_action_previous_track">Преминаване към предишната песен</string>
+  <string name="touchscreen_gesture_action_next_track">Преминаване към следващата песен</string>
 </resources>
