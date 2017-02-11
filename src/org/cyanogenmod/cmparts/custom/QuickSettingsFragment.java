@@ -49,10 +49,10 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
-    private SeekBarPreferenceCham mRowsPortrait;
-    private SeekBarPreferenceCham mRowsLandscape;
-    private SeekBarPreferenceCham mQsColumnsPortrait;
-    private SeekBarPreferenceCham mQsColumnsLandscape;
+    private ListPreference mRowsPortrait;
+    private ListPreference mRowsLandscape;
+    private ListPreference mQsColumnsPortrait;
+    private ListPreference mQsColumnsLandscape;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -92,29 +92,33 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
         updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
         mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
-        mRowsPortrait = (SeekBarPreferenceCham) findPreference(PREF_ROWS_PORTRAIT);
+        mRowsPortrait = (ListPreference) findPreference(PREF_ROWS_PORTRAIT);
         int rowsPortrait = Settings.Secure.getInt(resolver,
                 Settings.Secure.QS_ROWS_PORTRAIT, 3);
-        mRowsPortrait.setValue((int) rowsPortrait);
+        mRowsPortrait.setValue(String.valueOf(rowsPortrait));
+        mRowsPortrait.setSummary(mRowsPortrait.getEntry());
         mRowsPortrait.setOnPreferenceChangeListener(this);
 
         defaultValue = getResources().getInteger(com.android.internal.R.integer.config_qs_num_rows_landscape_default);
-        mRowsLandscape = (SeekBarPreferenceCham) findPreference(PREF_ROWS_LANDSCAPE);
+        mRowsLandscape = (ListPreference) findPreference(PREF_ROWS_LANDSCAPE);
         int rowsLandscape = Settings.Secure.getInt(resolver,
                 Settings.Secure.QS_ROWS_LANDSCAPE, defaultValue);
-        mRowsLandscape.setValue((int) rowsLandscape);
+        mRowsLandscape.setValue(String.valueOf(rowsLandscape));
+        mRowsLandscape.setSummary(mRowsLandscape.getEntry());
         mRowsLandscape.setOnPreferenceChangeListener(this);
 
-        mQsColumnsPortrait = (SeekBarPreferenceCham) findPreference(PREF_COLUMNS_PORTRAIT);
+        mQsColumnsPortrait = (ListPreference) findPreference(PREF_COLUMNS_PORTRAIT);
         int columnsQsPortrait = Settings.Secure.getInt(resolver,
                 Settings.Secure.QS_COLUMNS_PORTRAIT, 3);
-        mQsColumnsPortrait.setValue((int) columnsQsPortrait);
+        mQsColumnsPortrait.setValue(String.valueOf(columnsQsPortrait));
+        mQsColumnsPortrait.setSummary(mQsColumnsPortrait.getEntry());
         mQsColumnsPortrait.setOnPreferenceChangeListener(this);
 
-        mQsColumnsLandscape = (SeekBarPreferenceCham) findPreference(PREF_COLUMNS_LANDSCAPE);
+        mQsColumnsLandscape = (ListPreference) findPreference(PREF_COLUMNS_LANDSCAPE);
         int columnsQsLandscape = Settings.Secure.getInt(resolver,
                 Settings.Secure.QS_COLUMNS_LANDSCAPE, 3);
-        mQsColumnsLandscape.setValue((int) columnsQsLandscape);
+        mQsColumnsLandscape.setValue(String.valueOf(columnsQsLandscape));
+        mQsColumnsLandscape.setSummary(mQsColumnsLandscape.getEntry());
         mQsColumnsLandscape.setOnPreferenceChangeListener(this);
 
     }
@@ -149,24 +153,32 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             return true;
         } else if (preference == mRowsPortrait) {
-            intValue = (Integer) newValue;
+            intValue = Integer.parseInt((String) newValue);
+            index = mRowsPortrait.findIndexOfValue((String) newValue);
             Settings.Secure.putInt(resolver,
                     Settings.Secure.QS_ROWS_PORTRAIT, intValue);
+            preference.setSummary(mRowsPortrait.getEntries()[index]);
             return true;
         } else if (preference == mRowsLandscape) {
-            intValue = (Integer) newValue;
+            intValue = Integer.parseInt((String) newValue);
+            index = mRowsLandscape.findIndexOfValue((String) newValue);
             Settings.Secure.putInt(resolver,
                     Settings.Secure.QS_ROWS_LANDSCAPE, intValue);
+            preference.setSummary(mRowsLandscape.getEntries()[index]);
             return true;
         } else if (preference == mQsColumnsPortrait) {
-            intValue = (Integer) newValue;
+            intValue = Integer.parseInt((String) newValue);
+            index = mQsColumnsPortrait.findIndexOfValue((String) newValue);
             Settings.Secure.putInt(resolver,
                     Settings.Secure.QS_COLUMNS_PORTRAIT, intValue);
+            preference.setSummary(mQsColumnsPortrait.getEntries()[index]);
             return true;
         } else if (preference == mQsColumnsLandscape) {
-            intValue = (Integer) newValue;
+            intValue = Integer.parseInt((String) newValue);
+            index = mQsColumnsLandscape.findIndexOfValue((String) newValue);
             Settings.Secure.putInt(resolver,
                     Settings.Secure.QS_COLUMNS_LANDSCAPE, intValue);
+            preference.setSummary(mQsColumnsLandscape.getEntries()[index]);
             return true;
         }
         return false;

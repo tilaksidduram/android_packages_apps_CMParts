@@ -58,52 +58,36 @@
         android:title="@string/lockscreen_qs_disabled_title"
         android:summary="@string/lockscreen_qs_disabled_summary"
         android:defaultValue="false" />
-	
+
     <cyanogenmod.preference.SystemSettingSwitchPreference
         android:key="qs_running_services_toggle"
         android:title="@string/qs_running_services_title"
         android:summary="@string/qs_running_services_summary"
         android:defaultValue="true" />
 
-    <org.cyanogenmod.cmparts.widget.SeekBarPreferenceCham
+    <ListPreference
         android:key="qs_rows_portrait"
         android:title="@string/qs_rows_portrait_title"
-        android:summary="@string/qs_rows_portrait_summary"
-        android:max="4"
-        aicpextras:minimum="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        aicpextras:defaultVal="3" />
+        android:entries="@array/qs_rows_portrait_entries"
+        android:entryValues="@array/qs_rows_portrait_values" />
 
-    <org.cyanogenmod.cmparts.widget.SeekBarPreferenceCham
+    <ListPreference
         android:key="qs_rows_landscape"
         android:title="@string/qs_rows_landscape_title"
-        android:summary="@string/qs_rows_landscape_summary"
-        android:max="3"
-        aicpextras:minimum="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        aicpextras:defaultVal="2" />
+        android:entries="@array/qs_rows_landscape_entries"
+        android:entryValues="@array/qs_rows_landscape_values" />
 
-    <org.cyanogenmod.cmparts.widget.SeekBarPreferenceCham
+    <ListPreference
         android:key="qs_columns_portrait"
         android:title="@string/qs_columns_portrait_title"
-        android:summary="@string/qs_columns_portrait_summary"
-        android:max="6"
-        aicpextras:minimum="3"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        aicpextras:defaultVal="3" />
+        android:entries="@array/qs_columns_portrait_entries"
+        android:entryValues="@array/qs_columns_portrait_values" />
 
-    <org.cyanogenmod.cmparts.widget.SeekBarPreferenceCham
+    <ListPreference
         android:key="qs_columns_landscape"
         android:title="@string/qs_columns_landscape_title"
-        android:summary="@string/qs_columns_landscape_summary"
-        android:max="9"
-        aicpextras:minimum="3"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        aicpextras:defaultVal="3" />
+        android:entries="@array/qs_columns_landscape_entries"
+        android:entryValues="@array/qs_columns_landscape_values" />
 
     <ListPreference
         android:key="qs_tile_animation_style"
