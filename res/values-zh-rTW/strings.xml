@@ -177,6 +177,7 @@
   <string name="camera_launch_title">開啟相機</string>
   <string name="camera_launch_summary">按住並放開將會啟動相機</string>
   <string name="volbtn_music_controls_title">控制播放</string>
+  <string name="volbtn_music_controls_summary">在顯示螢幕關閉時長按音量鍵可尋找音樂曲目</string>
   <string name="volbtn_cursor_control_title">鍵盤游標控制</string>
   <string name="volbtn_cursor_control_off">已停用</string>
   <string name="volbtn_cursor_control_on">音量上/下使游標右/左移動</string>
@@ -231,6 +232,8 @@
   <string name="camera_double_tap_power_gesture_title">按住電源鍵兩下開啟相機</string>
   <!-- Description of setting that controls gesture to open camera by double tapping the power button [CHAR LIMIT=NONE] -->
   <string name="camera_double_tap_power_gesture_desc">快速開啟相機，無需解鎖螢幕</string>
+  <string name="torch_long_press_power_gesture_title">長按開啟手電筒</string>
+  <string name="torch_long_press_power_gesture_desc">當螢幕關閉時長按電源鍵啟動手電筒</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">刪除</string>
   <string name="profile_action_none">保持不變</string>
@@ -426,7 +429,7 @@
   <string name="anonymous_statistics_warning_title">相關資訊</string>
   <string name="anonymous_statistics_warning">加入 LineageOS 統計將允許非個人資料被提交到 LineageOS 的開發人員，
         以追蹤每個裝置上的獨特安裝。提交的資訊包含一個唯一識別碼，此識別碼並不會泄露您的隱私或個人資料。
-        該資料在每次開機時被提交。\n\n輕觸預覽資料以預覽被提交資料的例子。</string>
+        該資料在每次開機時被提交。\n\n輕觸預覽資料以預覽被提交資料的範例。</string>
   <string name="enable_reporting_title">啟用報告</string>
   <string name="preview_data_title">預覽資料</string>
   <string name="view_stats_title">檢視統計</string>
@@ -518,6 +521,7 @@
   <string name="touchscreen_gesture_letter_o_title">畫出一個字母「O」</string>
   <string name="touchscreen_gesture_letter_m_title">畫出一個字母「M」</string>
   <string name="touchscreen_gesture_letter_s_title">畫出一個字母「S」</string>
+  <string name="touchscreen_gesture_letter_v_title">畫出一個字母「V」</string>
   <string name="touchscreen_gesture_letter_w_title">畫出一個字母「W」</string>
   <string name="touchscreen_gesture_letter_z_title">畫出一個字母「Z」</string>
   <string name="touchscreen_gesture_action_dialog_title">手勢動作</string>
