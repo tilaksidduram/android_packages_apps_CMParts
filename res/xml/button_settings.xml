@@ -314,6 +314,11 @@
         android:key="anbi"
         android:title="@string/anbi_title"
         android:summary="@string/anbi_summary" />
+
+    <cyanogenmod.preference.SystemSettingSwitchPreference
+        android:key="pocket_judge"
+        android:title="@string/pocket_judge_title"
+        android:summary="@string/pocket_judge_summary" />
     </PreferenceCategory>
 
 </PreferenceScreen>
