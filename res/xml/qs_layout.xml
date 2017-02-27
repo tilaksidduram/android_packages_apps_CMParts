@@ -12,6 +12,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/org.cyanogenmod.cmparts"
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
 
