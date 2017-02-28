@@ -7,7 +7,6 @@ import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.preference.Preference;
-import android.support.design.widget.Snackbar;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -165,31 +164,6 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
                             startUpdateViewValue();
                         }
                     }
-            });
-            mStatusText = (TextView) layout.findViewById(R.id.seekBarPrefValue);
-            mStatusText.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    final String defaultValue = getContext().getString(R.string.seekbar_default_value_set,
-                            mDefaultValue);
-                    if (mDefaultValue != -1) {
-                        if (mDefaultValue != mCurrentValue) {
-                            mSeekBar.setProgress(mDefaultValue);
-                            Snackbar.make(view, defaultValue,
-                                    Snackbar.LENGTH_LONG)
-                                    .setAction("Action", null).show();
-                        } else {
-                            Snackbar.make(view, R.string.seekbar_default_value_already_set,
-                                    Snackbar.LENGTH_LONG)
-                                    .setAction("Action", null).show();
-                        }
-                    } else {
-                        Snackbar.make(view, R.string.seekbar_no_default_value,
-                                Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    }
-                    return true;
-                }
             });
         }
         catch(Exception e)
