@@ -59,7 +59,7 @@
   <string name="privacy_guard_notification_title">Vis varsel</string>
   <!-- Notification light dialogs -->
   <string name="edit_light_settings">Endre lys innstillinger</string>
-  <string name="pulse_speed_title">Puls lengde og hastighet</string>
+  <string name="pulse_speed_title">Pulseringshastighet og lengde</string>
   <string name="default_time">Normal</string>
   <string name="custom_time">Egendefinert</string>
   <string name="dialog_delete_title">Slett</string>
@@ -174,6 +174,8 @@
   <string name="hardware_keys_action_sleep">Slå skjermen av</string>
   <string name="hardware_keys_action_last_app">Siste app</string>
   <string name="hardware_keys_action_split_screen">Delt skjerm</string>
+  <string name="hardware_keys_action_single_handed_left">Enhåndsstyring (venstre)</string>
+  <string name="hardware_keys_action_single_handed_right">Enhåndsstyring (høyre)</string>
   <string name="camera_sleep_on_release_title">Skjermtitt</string>
   <string name="camera_sleep_on_release_summary">Et halvt trykk holder bare skjermen påslått mens knappen holdes nede</string>
   <string name="camera_launch_title">Start kamera</string>
@@ -299,7 +301,7 @@
   <string name="profile_reset_title">Tilbakestill</string>
   <string name="profile_reset_message">Slette alle brukeropprettede profiler og appgrupper og gjenopprette dem til standard?</string>
   <!-- Delete confimation messages -->
-  <string name="profile_app_delete_confirm">Fjerne denne appen?</string>
+  <string name="profile_app_delete_confirm">Fjern denne appen?</string>
   <!-- Profile network mode -->
   <string name="profile_networkmode_2g">2G</string>
   <string name="profile_networkmode_3g">3G</string>
@@ -371,16 +373,20 @@
   <string name="notification_volume_title">Varsler</string>
   <string name="media_volume_title">Media</string>
   <string name="alarm_volume_title">Alarm</string>
-  <string name="doze_title">Ambient skjerm</string>
+  <string name="doze_title">Omgivelsesskjerm</string>
   <!-- Status bar -->
   <string name="status_bar_title">Statuslinje</string>
   <string name="status_bar_quick_qs_pulldown_title">Rask rullegardinmeny</string>
-  <string name="status_bar_quick_qs_pulldown_summary">Ved å dra ned fra %1$s side av statuslinjen, drar du ned Hurtiginnstillingene</string>
+  <string name="status_bar_quick_qs_pulldown_summary">Ved å dra ned fra %1$s side av statuslinjen, kommer du rett til hurtiginnstillingene</string>
+  <string name="status_bar_quick_qs_pulldown_summary_left">Venstre</string>
+  <string name="status_bar_quick_qs_pulldown_summary_right">Høyre</string>
   <string name="status_bar_quick_qs_pulldown_off">Av</string>
   <string name="status_bar_quick_qs_pulldown_left">Venstre</string>
   <string name="status_bar_quick_qs_pulldown_right">Høyre</string>
   <string name="status_bar_toggle_brightness">Lysstyrkekontroll</string>
   <string name="status_bar_toggle_brightness_summary">Juster lysstyrken ved å sveipe langs statuslinjen</string>
+  <string name="status_bar_double_tap_to_sleep_title">Dobbelttrykk for å slukke skjermen</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Dobbelttrykk på statuslinjen for å slå av skjermen</string>
   <!-- Status bar - icons -->
   <string name="status_bar_icons_title">Statuslinjeikoner</string>
   <string name="status_bar_notif_count_title">Vis antall varsler</string>
@@ -399,6 +405,7 @@
   <string name="status_bar_am_pm_small">Liten</string>
   <string name="status_bar_am_pm_hidden">Skjult</string>
   <!-- Status bar - Battery -->
+  <string name="status_bar_battery_title">Batteriindikator</string>
   <string name="status_bar_battery_style_title">Stil på batteriikon</string>
   <string name="status_bar_battery_style_icon_portrait">Stående batteriikon</string>
   <string name="status_bar_battery_style_icon_landscape">Liggende batteriikon</string>
@@ -406,7 +413,7 @@
   <string name="status_bar_battery_style_text">Tekst</string>
   <string name="status_bar_battery_style_hidden">Skjult</string>
   <!-- Status bar - Battery percentage -->
-  <string name="status_bar_battery_percentage_title">Batteri prosent</string>
+  <string name="status_bar_battery_percentage_title">Batteriprosent</string>
   <string name="status_bar_battery_percentage_default">Skjult</string>
   <string name="status_bar_battery_percentage_text_inside">Inne i ikonet</string>
   <string name="status_bar_battery_percentage_text_next">Ved siden av ikonet</string>
@@ -432,7 +439,7 @@
                  <b>Siste oppdatering:</b><xliff:g id="date">%3$s</xliff:g>]]></string>
   <!-- Anonymous Statistics #CM -->
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-  <string name="anonymous_statistics_title">LineageOS statistikk</string>
+  <string name="anonymous_statistics_title">LineageOS-statistikk</string>
   <string name="anonymous_statistics_summary">Hjelp oss med å gjøre LineageOS bedre ved å velge å sende inn anonym statistikkrapportering</string>
   <string name="anonymous_statistics_warning_title">Om</string>
   <string name="anonymous_statistics_warning">Ved å bli med i innsamlingen av LineageOS statistikk vil ikke-personlige data bli sendt til utviklerne av LineageOS for å spore antall unike installasjoner spredt over typer enheter. Informasjonen som sendes inkluderer en unik identitetskode, som ikke kompromitterer ditt personvern eller dine personlige data. Data blir sendt ved hver oppstart.\n\nFor ett eksempel over data som blir sendt, trykk på Forhåndsvis data.</string>
@@ -489,7 +496,7 @@
   <string name="auto_power_save_summary_on">Aktiver strømsparing automatisk på %s batteriprosent</string>
   <string name="auto_power_save_summary_off">Ikke slå på strømsparingsmodus automatisk</string>
   <string name="app_perf_profiles_title">Automatisk optimalisering</string>
-  <string name="app_perf_profiles_summary">Velg automatisk en riktig ytelsesprofil for applikasjoner og bruksmønster</string>
+  <string name="app_perf_profiles_summary">Velg automatisk en riktig ytelsesprofil for apper og bruksmønster</string>
   <string name="auto_power_save_never">Aldri</string>
   <!-- Applications: Expanded desktop -->
   <string name="expanded_desktop_settings_title">Utvidet skrivebord</string>
@@ -504,7 +511,7 @@
   <!-- Sounds: Charging sounds -->
   <string name="charging_sounds_settings_title">Lade-lyder</string>
   <string name="charging_sounds_enabled_title">Aktiver</string>
-  <string name="charging_sounds_enabled_summary">Spill av en lyd når du kobler til eller kobler fra en strømkilde</string>
+  <string name="charging_sounds_enabled_summary">Spill av en lyd når du kobler til eller fra en strømkilde</string>
   <string name="power_notifications_vibrate_title">Vibrer</string>
   <string name="charging_sounds_ringtone_title">Varslingslyd</string>
   <string name="charging_sounds_ringtone_silent">Lydløs</string>
@@ -512,7 +519,7 @@
   <string name="touchscreen_gesture_settings_title">Berøringsskjerm bevegelser</string>
   <string name="touchscreen_gesture_settings_summary">Utfør forskjellige berøringsskjerm bevegelser for raske handlinger</string>
   <string name="touchscreen_gestures_haptic_feedback_title">Haptisk tilbakemelding</string>
-  <string name="touchscreen_gestures_haptic_feedback_summary">Vibrer når en berøringsskjerm bevegelse er oppdaget</string>
+  <string name="touchscreen_gestures_haptic_feedback_summary">Vibrer når en berøringsskjermsbevegelse oppdages</string>
   <string name="touchscreen_gesture_two_finger_down_swipe_title">Dra ned med to fingre</string>
   <string name="touchscreen_gesture_one_finger_up_swipe_title">Dra opp med en finger</string>
   <string name="touchscreen_gesture_one_finger_down_swipe_title">Dra ned med en finger</string>
