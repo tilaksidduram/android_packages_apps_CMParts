@@ -19,14 +19,6 @@
     <!--Preference Categories-->
     <string name="quicksettings_tiles_category">QuickSettings Panel Configurations</string>
 
-    <!-- Brightness slider -->
-    <string name="qs_brightness_slider_title">Brightness slider</string>
-    <string name="qs_brightness_slider_enabled">Enabled</string>
-    <string name="qs_brightness_slider_disabled">Disabled</string>
-
-    <string name="brightness_icon_title">Brightness icon </string>
-    <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
-
     <!-- QuickSettings haptic feedback -->
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
     <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
