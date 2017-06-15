@@ -306,4 +306,14 @@
             android:summary="@string/swap_volume_buttons_summary" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="custom_keys"
+        android:title="@string/custom_keys_title">
+
+    <cyanogenmod.preference.SystemSettingSwitchPreference
+        android:key="anbi"
+        android:title="@string/anbi_title"
+        android:summary="@string/anbi_summary" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
