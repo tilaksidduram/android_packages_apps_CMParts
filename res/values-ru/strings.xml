@@ -221,7 +221,7 @@
   <string name="navigation_bar_recents_title">Долгое нажатие кнопки «Обзор»</string>
   <!-- Power menu -->
   <string name="power_menu_title">Меню кнопки питания</string>
-  <string name="power_menu_reboot_title">Меню перезагрузки</string>
+  <string name="power_menu_reboot_title">Меню перезапуска</string>
   <string name="power_menu_screenshot_title">Скриншот</string>
   <string name="power_menu_airplane_title">Режим полета</string>
   <string name="power_menu_users_title">Переключение пользователей</string>
@@ -238,6 +238,7 @@
   <string name="camera_double_tap_power_gesture_desc">Быстро запустить камеру без разблокировки устройства</string>
   <string name="torch_long_press_power_gesture_title">Долг. наж. для вкл. фонарика</string>
   <string name="torch_long_press_power_gesture_desc">Включать фонарик долгим нажатием кнопки питания при выключенном экране</string>
+  <string name="torch_long_press_power_timeout_title">Выключать фонарик автоматически</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">Удалить</string>
   <string name="profile_action_none">Оставить без изменений</string>
