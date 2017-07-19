@@ -66,6 +66,15 @@
         android:defaultValue="true" />
 
     <ListPreference
+        android:key="battery_tile_style"
+        android:title="@string/battery_tile_style_title"
+        android:summary="%s"
+        android:dialogTitle="@string/battery_tile_style_title"
+        android:entries="@array/battery_tile_style_entries"
+        android:entryValues="@array/battery_tile_style_values"
+        android:defaultValue="0" />
+
+    <ListPreference
         android:key="qs_rows_portrait"
         android:title="@string/qs_rows_portrait_title"
         android:entries="@array/qs_rows_portrait_entries"

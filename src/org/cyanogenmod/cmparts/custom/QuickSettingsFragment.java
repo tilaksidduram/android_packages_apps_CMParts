@@ -38,6 +38,7 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
 
     private static final String TAG = "QuickSettings";
 
+    private static final String BATTERY_TILE_STYLE = "battery_tile_style";
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
@@ -53,6 +54,8 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
     private ListPreference mRowsLandscape;
     private ListPreference mQsColumnsPortrait;
     private ListPreference mQsColumnsLandscape;
+    private ListPreference mBatteryTileStyle;
+    private int mBatteryTileStyleValue;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -121,6 +124,13 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
         mQsColumnsLandscape.setSummary(mQsColumnsLandscape.getEntry());
         mQsColumnsLandscape.setOnPreferenceChangeListener(this);
 
+        mBatteryTileStyle = (ListPreference) findPreference(BATTERY_TILE_STYLE);
+        mBatteryTileStyleValue = Settings.Secure.getInt(resolver,
+                Settings.Secure.BATTERY_TILE_STYLE, 0);
+        mBatteryTileStyle.setValue(Integer.toString(mBatteryTileStyleValue));
+        mBatteryTileStyle.setSummary(mBatteryTileStyle.getEntry());
+        mBatteryTileStyle.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -179,6 +189,14 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
             Settings.Secure.putInt(resolver,
                     Settings.Secure.QS_COLUMNS_LANDSCAPE, intValue);
             preference.setSummary(mQsColumnsLandscape.getEntries()[index]);
+            return true;
+        }  else if (preference == mBatteryTileStyle) {
+            mBatteryTileStyleValue = Integer.valueOf((String) newValue);
+            index = mBatteryTileStyle.findIndexOfValue((String) newValue);
+            mBatteryTileStyle.setSummary(
+                    mBatteryTileStyle.getEntries()[index]);
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.BATTERY_TILE_STYLE, mBatteryTileStyleValue);
             return true;
         }
         return false;
