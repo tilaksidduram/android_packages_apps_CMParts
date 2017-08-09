@@ -25,8 +25,8 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.view.MenuItem;
 
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
+import org.cyanogenmod.cmparts.R;
+import org.cyanogenmod.cmparts.SettingsPreferenceFragment;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
@@ -36,10 +36,12 @@ public class PieSettings extends SettingsPreferenceFragment implements
     private static final String KEY_PIE_BATTERY = "pie_battery_mode";
     private static final String KEY_PIE_THEME = "pie_theme_mode";
     private static final String KEY_PIE_STATUS = "pie_status_indicator";
+    private static final String PA_PIE_GRAVITY = "pa_pie_gravity";
 
     private ListPreference mTheme;
     private ListPreference mBattery;
     private ListPreference mStatus;
+    private ListPreference mPieGravity;
 
     @Override
     public void onCreate(Bundle savedInstance) {
@@ -71,11 +73,14 @@ public class PieSettings extends SettingsPreferenceFragment implements
             mStatus.setValue(String.valueOf(value));
             mStatus.setOnPreferenceChangeListener(this);
         }
-    }
 
-    @Override
-    protected int getMetricsCategory() {
-        return -1;
+        mPieGravity = (ListPreference) findPreference(PA_PIE_GRAVITY);
+        if (mPieGravity != null) {
+            int pieGravity = Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.PIE_GRAVITY, 2);
+            mPieGravity.setValue(String.valueOf(pieGravity));
+            mPieGravity.setOnPreferenceChangeListener(this);
+        }
     }
 
     @Override
@@ -89,6 +94,9 @@ public class PieSettings extends SettingsPreferenceFragment implements
         }
         if (preference == mStatus) {
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.PIE_STATUS_INDICATOR, value);
+        }
+        if (preference == mPieGravity) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.PIE_GRAVITY, value);
         }
         return true;
     }

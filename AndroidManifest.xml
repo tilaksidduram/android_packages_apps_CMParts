@@ -238,8 +238,7 @@
                 android:taskAffinity=""
                 android:exported="true">
             <intent-filter android:priority="1">
-                <action android:name="com.android.settings.PIE_SETTINGS" />
-                <action android:name="android.settings.PIE_SETTINGS" />
+                <action android:name="org.cyanogenmod.cmparts.PIE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
